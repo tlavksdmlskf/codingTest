@@ -1,0 +1,2 @@
+-- 코드를 입력하세요
+SELECT p.PRODUCT_ID, p.PRODUCT_NAME, sum(AMOUNT * PRICE) as TOTAL_SALES from FOOD_PRODUCT p, FOOD_ORDER o where p.PRODUCT_ID = o.PRODUCT_ID and to_char(PRODUCE_DATE,'yyyy-mm') like ('2022-05%') group by p.PRODUCT_ID, PRODUCT_NAME order by TOTAL_SALES desc, PRODUCT_ID
